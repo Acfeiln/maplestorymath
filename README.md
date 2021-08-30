@@ -35,3 +35,8 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+### Math?
+Let me try some standard math markdown. Here we have inline: $x = -b + a^3$ etc. And perhaps not inline:
+$$ abc^2 = 4 $$
+Let's see.
