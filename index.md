@@ -1,35 +1,21 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-## Welcome to GitHub Pages
+First things first: this site is messy. It is basically an extended scratch journal. For now, it is for me to doodle as I learn GitHub Pages. Eventually, this will have a blog-like format with links to posts, but for now I'm just going to write something.
 
-You can use the [editor on GitHub](https://github.com/Acfeiln/maplestorymath/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Cubing rates and costs.
+We roll a set of potential lines with each cube. Let $$p_\text{o}$$ be the probability of rolling a desired set of epic lines per occult cube, and $$p_\text{m}$$ be the probability of rolling a desired set of unique or legendary (as applicable) lines using a master or meister (or other) cube. I assume your item is *already* at the desired tier for this; I'm not including anything to do with rank-up probabilities for now. Similarly, let $$c_\text{o}$$ be the cost (in mesos) per occult cube, and $$c_\text{m}$$ be that for whichever fancier cube you wish to compare.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Generally, if we have a probability $$p$$ of rolling a desired set of lines per roll, after $$N$$ rolls the chance of rolling the desired set at least once is
 
-### Markdown
+$$
+\qquad 1 - \left( 1-p \right)^N
+$$
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+(testing page now)
+$$
+\qquad 1 - \left( 1-p \right)^N
+$$.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Acfeiln/maplestorymath/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+$$
+\qquad 1 - \left( 1-p \right)^N
+$$.
