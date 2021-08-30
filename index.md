@@ -1,6 +1,6 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-First things first: this site is messy. It is basically an extended scratch journal. For now, it is for me to doodle as I learn GitHub Pages. Eventually, this will have a blog-like format with links to posts, but for now I'm just going to write something.
+First things first: this site is messy. It's basically an extended scratch journal. For now, it's for me to doodle as I learn GitHub Pages. Eventually, this will have a blog-like format with links to posts, but for now I'm just going to write something.
 
 ## 3 Line Epic is Cheaper?
 
@@ -24,6 +24,8 @@ giving
 $$
 \qquad \displaystyle N = \frac{\log f}{\log \left( 1 - p \right)}
 $$.
+
+**Note: this is NOT the minimum number of rolls required to get your lines. That is always lower bounded by 1---you can get arbitrarily lucky. Instead this is the minimum number of rolls you need for the *chances* of rolling your lines at least once to exceed $$1 - f$$ (so if $$f = 0.1$$, we're talking about the number of rolls such that $$\mathrm{Pr} \left( \text{desired lines at least once in } N \text{rolls} \right) = 90\% $$.**
 
 ### The Question
 Now, I want to ask: could it ever be *more* worth it to try for something *less* likely on cheaper occult cubes in the epic tier, versus spending more to use master or meister cubes for more likely lines in unique or legendary tiers?
