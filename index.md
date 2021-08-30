@@ -25,7 +25,7 @@ $$
 \qquad \displaystyle N = \frac{\log f}{\log \left( 1 - p \right)}
 $$.
 
-**Note: this is NOT the minimum number of rolls required to get your lines. That is always lower bounded by 1---you can get arbitrarily lucky. Instead this is the minimum number of rolls you need for the *chances* of rolling your lines at least once to exceed $$1 - f$$ (so if $$f = 0.1$$, we're talking about the number of rolls such that $$\mathrm{Pr} \left( \text{desired lines at least once in } N \text{rolls} \right) = 90\% $$.**
+**Note: this is NOT the minimum number of rolls required to get your lines.** That is always lower bounded by $$1$$---you can get arbitrarily lucky. Instead this is the minimum number of rolls you need for the *chances* of seeing your lines at least once to exceed $$1 - f$$. So for example if $$f = 0.1$$, we're talking about the $$N$$ such that $$\mathrm{Pr} \left( \text{desired lines at least once in } N \text{ rolls} \right) = 90\% $$. **This is also NOT the expected number of rolls required to see your lines.** I've opted not to bother calculating that ("average number of rolls") for now, but might later.
 
 ### The Question
 Now, I want to ask: could it ever be *more* worth it to try for something *less* likely on cheaper occult cubes in the epic tier, versus spending more to use master or meister cubes for more likely lines in unique or legendary tiers?
@@ -47,7 +47,7 @@ $$
 \qquad \displaystyle k = \frac{c_\text{o} \log \left( 1 - p_\text{m}\right) }{c_\text{m} \log \left( 1 - p_\text{o}\right)}
 $$.
 
-**SO: when $$k \geq 1$$, it's worth rolling the fancier cubes. Otherwise, it'll cost less to go for more lines on occult cubes.** Notice that "maximum desired failure rate" $$f$$ doesn't show up in the final formula at all---we got rid of it by considering only the *ratio* of costs. Thus the result applies for *any* failure rate: the goal is just to get your desired lines with equal chances. It will take more rolls for less likely outcomes (3-lines epic), but will cost more to use fancier cubes.
+**SO: when $$k \geq 1$$, it's worth rolling the fancier cubes. Otherwise, it'll cost less "on average" (not actually taken on average) to go for more lines on occult cubes.** Notice that "maximum desired failure rate" $$f$$ doesn't show up in the final formula at all---we got rid of it by considering only the *ratio* of costs. Thus the result applies for *any* failure rate: the goal is just to get your desired lines with equal chances. It will take more rolls for less likely outcomes (3-lines epic), but will cost more to use fancier cubes. And, just another note that I have *not* calculated any expected values. These are instead based on having a fixed failure rate: if $$k < 1$$, it costs more to roll to a 95% chance (or any other chance you like) of seeing your desired epic lines than to a 95% chance of seeing your desired unique/etc. lines.
 
 ### Example: CRA Hat in Bera
-Before actually crunching some numbers, we should take another quick look at our result for $$k$$. Notice the ratio of *costs* appears on its own, while the ratios of probabilities are obscured behind logarithms. This should prime is to expect cost per cube to matter *more* than chances of success between the different cubes. In Bera:
+Before actually crunching some numbers, we should take another quick look at our result for $$k$$. Notice the ratio of *costs* appears on its own, while the ratios of probabilities are obscured behind logarithms. This should prime us to expect cost per cube to matter *more* than chances of success between the different cubes. In Bera:
