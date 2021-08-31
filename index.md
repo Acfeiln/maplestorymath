@@ -11,7 +11,7 @@ $$
 \qquad \displaystyle 1 - \left( 1 - p \right)^N
 $$.
 
-(At some point, I'll put a link to a derivation here.)
+(If you're interested in the derivation, this is the geometric distribution's cumulative distribution function. The Wikipedia page also includes means, variances, and all other manner of stats 101 goodness. I'll take a slightly different approach, mostly for fun.)
 
 Suppose we want a failure rate of at most $$f$$, so that after $$N$$ rolls, the chance we *haven't* gotten our desired lines is $$\leq f$$. Then at minimum we need to roll $$N$$ times such that
 
@@ -25,15 +25,19 @@ $$
 \qquad \displaystyle N = \frac{\log f}{\log \left( 1 - p \right)}
 $$.
 
-**Note: this is NOT the minimum number of rolls required to get your lines.** That is always lower bounded by $$1$$---you can get arbitrarily lucky. Instead this is the minimum number of rolls you need for the *chances* of seeing your lines at least once to exceed $$1 - f$$. So for example if $$f = 0.1$$, we're talking about the $$N$$ such that $$\mathrm{Pr} \left( \text{desired lines at least once in } N \text{ rolls} \right) = 90\% $$. **This is also NOT the expected number of rolls required to see your lines.** I've opted not to bother calculating that ("average number of rolls") for now, but might later.
+**Note: this is NOT the minimum number of rolls required to get your lines.** That is always lower bounded by $$1$$---you can get arbitrarily lucky. Instead this is the minimum number of rolls you need for the *chances* of seeing your lines at least once to exceed $$1 - f$$. So for example if $$f = 0.1$$, we're talking about $$N$$ such that
+
+$$\qquad \displaystyle \mathrm{Pr} \left( \text{desired lines at least once in } N \text{ rolls} \right) = 90 \%$$. 
+
+**This is also NOT the expected number of rolls required to see your lines.** That would be $$\left\lbracket N \right\rbracket = 1/p $$---something big, and also something biased by the boundless possibility to fail. The geometric distribution is asymmetrical, and nobody can actually realize $$N \to \infty$$ rolls, so I'll only bring the expected values back in at the end for comparison and some interpretation. Nevertheless, good to know the asymptotics are there if you want them.
 
 ### The Question
-Now, I want to ask: could it ever be *more* worth it to try for something *less* likely on cheaper occult cubes in the epic tier, versus spending more to use master or meister cubes for more likely lines in unique or legendary tiers?
+I want to ask: could I ever benefit *more* by trying for *less* likely rolls with cheaper occult cubes in the epic tier, versus spending more on master or meister cubes for *more* likely unique/legendary lines?
 
-Let's take a concrete example: a CRA hat. A perfect 3 epic lines with just one primary gives +12% stat. You could in principle transfer hammer this potential from lower-level equipment, saving an order of magnitude on reveal costs (though I won't factor that in here). A single primary unique line wouldn't do better, you'd need to roll at least 2, which would give +15% stat. Or, you could roll a single primary legendary line to do the exact same as the 3 line epic. **The question is: what is cheaper, in terms of only cube costs? Going for 3 lines on epic gear, or going for 2 on unique gear? Or even 1 line on legendary?**
+As a concrete example, consider a CRA hat. A perfect 3 epic lines with just one primary gives +12% stat. You could in principle transfer hammer this potential from lower-level equipment, saving an order of magnitude on reveal costs (though I won't factor that in here). A single primary unique line wouldn't do better, you'd need to roll at least 2, which would give +15% stat. Or, you could roll a single primary legendary line to do the exact same as the 3 line epic. **The question is: what is cheaper, in terms of only cube costs? Going for 3 lines on epic gear, or going for 2 on unique gear? Or even 1 line on legendary?**
 
 ### General Solution
-Let $$p_\text{o}$$ be the probability of rolling a desired set of epic lines per occult cube, and $$p_\text{m}$$ that of rolling a desired set of unique or legendary (as applicable) lines using a master or meister (or other) cube. I assume your item is *already* at the desired tier; I'm not including anything to do with rank-up chances for now. Similarly, let $$c_\text{o}$$ be the cost (in mesos) per occult cube, and $$c_\text{m}$$ be that for whichever fancier cube you wish to compare. Finally, let $$N_\text{o}$$ and $$N_\text{m}$$ be the minimum number of rolls you need to achieve a failure rate $$\leq f$$ on your occult and fancier rolls, respectively.
+Let $$p_\text{o}$$ be the probability of rolling a desired set of epic lines per occult cube, and $$p_\text{m}$$ that of rolling a desired set of unique or legendary (as applicable) lines using a master or meister (or other) cube. I assume your item is *already* at the desired tier; I'm not including anything to do with rank-up chances for now. Similarly, let $$c_\text{o}$$ be the cost (in mesos) per occult cube, and $$c_\text{m}$$ be that for whichever fancier cube you wish to compare. Finally, let $$N_\text{o}$$ and $$N_\text{m}$$ be the minimum number of rolls you need to achieve a failure rate $$\leq f$$ on your occult and fancier rolls, respectively. (Remember, this is 
 
 The *total* cost of rolling until you have probability $$1 - f$$ of getting your epic lines with occult cubes is $$ c_\text{o} N_\text{o}$$, and for the fancier ones it's $$ c_\text{m} N_\text{m}$$. Let's define a ratio $$k$$:
 
@@ -44,7 +48,7 @@ $$.
 Plugging in what we worked out earlier,
 
 $$
-\qquad \displaystyle k = \frac{c_\text{o} \log \left( 1 - p_\text{m}\right) }{c_\text{m} \log \left( 1 - p_\text{o}\right)}
+\boxed{ \qquad \displaystyle k = \frac{c_\text{o} \log \left( 1 - p_\text{m}\right) }{c_\text{m} \log \left( 1 - p_\text{o}\right)}}
 $$.
 
 **SO: when $$k \geq 1$$, it's worth rolling the fancier cubes. Otherwise, it'll cost less "on average" (not actually taken on average) to go for more lines on occult cubes.** Notice that "maximum desired failure rate" $$f$$ doesn't show up in the final formula at all---we got rid of it by considering only the *ratio* of costs. Thus the result applies for *any* failure rate: the goal is just to get your desired lines with equal chances. It will take more rolls for less likely outcomes (3-lines epic), but will cost more to use fancier cubes. 
