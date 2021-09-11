@@ -6,6 +6,10 @@ First things first: this site is messy. It's basically an extended scratch journ
 
 Bra-ket tests: $$\langle a \rangle a \mid$$
 
+Okay. So they work without left and right modifiers. Let's try with.
+
+$$ \left \langle a \right \rangle $$ and $$ \left \langle a \right \mid$$
+
 ## 3 Line Epic is Cheaper?
 
 ### Prerequisites
