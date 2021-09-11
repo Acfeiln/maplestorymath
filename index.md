@@ -4,7 +4,7 @@
 
 First things first: this site is messy. It's basically an extended scratch journal. For now, it's for me to doodle as I learn GitHub Pages. Eventually, this will have a blog-like format with links to posts, but for now I'm just going to write something.
 
-Bra-ket tests: $$\bra{a} \ket{a} \braket{a} \set{a} \Bra{a} \Ket{a} \Braket{a} \Set{a} \ketbra{a}{a}$$
+Bra-ket tests: $$\langle a \rangle a \mid$$
 
 ## 3 Line Epic is Cheaper?
 
