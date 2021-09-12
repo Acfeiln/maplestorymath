@@ -19,9 +19,7 @@ Suppose we want a failure rate of at most $$f$$, so that after $$N$$ rolls, the 
 
 $$ 
 \qquad \displaystyle \mathrm{Pr} \left( \geq 1 \text{ success in } N \right) = 1 - \left( 1 - p \right)^N \\
-\qquad \displaystyle \phantom{\mathrm{Pr} \left( \geq 1 \text{ success in } N \right)} \geq 1 - f $$
-
-which gives
+\qquad \displaystyle \phantom{\mathrm{Pr} \left( \geq 1 \text{ success in } N \right)} \geq 1 - f $$which gives
 
 $$
 \qquad \displaystyle N \geq \frac{\log f}{\log \left( 1 - p \right)}
