@@ -37,7 +37,7 @@ $$.
 
 $$\qquad \displaystyle \mathrm{Pr} \left( \text{desired lines at least once in } N \text{ rolls} \right) = 90 \%$$. 
 
-**This is also NOT the expected number of rolls required to see your lines.** That would be $$\braket{N} = 1/p $$---something big, and also something biased by the boundless possibility to fail. The geometric distribution is asymmetrical, and nobody can actually realize $$N \to \infty$$ rolls, so I'll only bring the expected values back in at the end for comparison and some interpretation. Nevertheless, good to know the asymptotics are there if you want them.
+**This is also NOT the expected number of rolls required to see your lines.** That would be $$\left \langle N \right \rangle = 1/p $$---something big, and also something biased by the boundless possibility to fail. The geometric distribution is asymmetrical, and nobody can actually realize $$N \to \infty$$ rolls, so I'll only bring the expected values back in at the end for comparison and some interpretation. Nevertheless, good to know the asymptotics are there if you want them.
 
 ### The Question
 I want to ask: could I ever benefit *more* by trying for *less* likely rolls with cheaper occult cubes in the epic tier, versus spending more on master or meister cubes for *more* likely unique/legendary lines?
