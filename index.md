@@ -58,7 +58,11 @@ $$.
 **SO: when $$k \geq 1$$, it's worth rolling for type "2." Otherwise, it's likely cheaper to go for type "1."** Notice that "maximum desired failure rate" $$f$$ doesn't show up in the final formula at all---we got rid of it by considering only the *ratio* of costs. Thus the result applies for *any* failure rate: the goal is just to get your desired lines with equal chances. It will take more rolls for less likely outcomes (3-lines epic), but will cost more to use fancier cubes. 
 
 ### What About Averages?
-Insert fun stuff here.
+As mentioned before, I've avoided a formulation based on averages. But you could! You'd get a sort of "average $$k$$," which I'll label $$\overbar{k}$$, based on the average number of rolls needed and fixed costs $$c_1$$ and $$c_2$$. It would be
+
+$$\qquad \displaystyle \overbar{k} = \frac{c_1 p_2}{c_2 p_1}$$.
+
+Quite a bit simpler! Why didn't I just do that?
 
 ### Example: CRA Hat in Bera
 Even more!
