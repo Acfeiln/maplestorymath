@@ -8,7 +8,7 @@ Bra-ket tests: $$\langle a \rangle a \mid$$
 
 Okay. So they work without left and right modifiers. Let's try with.
 
-$$ \left \langle a \right \rangle $$ and $$ \left \langle a \right \mid$$
+$$ \left \langle a \right \rangle $$ and $$ \left \langle a \right \| $$
 
 ## 3 Line Epic is Cheaper?
 
