@@ -19,17 +19,17 @@ Suppose we want a failure rate of at most $$f$$, so that after $$N$$ rolls, the 
 
 $$ 
 \qquad \displaystyle \mathrm{Pr} \left( \geq 1 \text{ success in } N \right) = 1 - \left( 1 - p \right)^N \\
-\qquad \displaystyle \phantom{\mathrm{Pr} \left( \geq 1 \text{ success in } N \right)} \geq 1 - f $$.
+\qquad \displaystyle \phantom{\mathrm{Pr} \left( \geq 1 \text{ success in } N \right)} \geq 1 - f $$
 
-Thus the minimum $$N$$ for at least a $$1 - f$$ chance of having gotten our lines is
+which gives
 
 $$
-\qquad \displaystyle N = \frac{\log f}{\log \left( 1 - p \right)}
+\qquad \displaystyle N \geq \frac{\log f}{\log \left( 1 - p \right)}
 $$.
 
 **Note: this is NOT the minimum number of rolls required to get your lines.** That is always lower bounded by $$1$$---you can get arbitrarily lucky. Instead this is the minimum number of rolls you need for the *chances* of seeing your lines at least once to exceed $$1 - f$$. So for example if $$f = 0.1$$, we're talking about $$N$$ such that 
 
-$$\qquad \displaystyle \mathrm{Pr} \left( \geq 1 \text{ success in } N \right) = 90 \%$$. 
+$$\qquad \displaystyle \mathrm{Pr} \left( \geq 1 \text{ success in } N \right) \geq 90 \%$$. 
 
 **This is also NOT the expected number of rolls required to see your lines.** That would be $$\left \langle N \right \rangle = 1/p $$. We'll compare with looking at averages at the end.
 
