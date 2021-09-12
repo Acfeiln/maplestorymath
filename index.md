@@ -15,13 +15,13 @@ $$.
 
 (If you're interested in the derivation, this is the [geometric distribution](https://en.wikipedia.org/wiki/Geometric_distribution)'s cumulative distribution function. The Wikipedia page also includes means, variances, and all other manner of stats 101 goodness. I'll take a slightly different approach, and explain why later.)
 
-Suppose we want a failure rate of at most $$f$$, so that after $$N$$ rolls, the chance we *haven't* gotten our desired lines is $$\leq f$$. Then at minimum we need to roll $$N$$ times such that
+Suppose we want a failure rate of at most $$f$$, so that after $$N$$ rolls, the chance we *haven't* gotten our desired lines is $$\leq f$$. How many times do we need to roll? At least $$N$$, as defined by
 
 $$
 \qquad \displaystyle 1 - \left( 1 - p \right)^N = 1 - f
 $$,
 
-giving
+which gives
 
 $$
 \qquad \displaystyle N = \frac{\log f}{\log \left( 1 - p \right)}
@@ -39,25 +39,25 @@ Could I ever benefit *more* by trying for *less* likely rolls with cheaper occul
 Consider a CRA hat. A perfect 3 epic lines with just one primary gives +12% stat. A single primary unique line wouldn't do better, you'd need to roll at least 2, which would give +15% stat. Or, you could roll a single primary legendary line to do the exact same as the 3 line epic. **The question is: what is cheaper? Going for 3 lines on epic gear, or going for 2 on unique gear? Or even 1 line on legendary?**
 
 ### General Solution
-Let $$p_1$$ be the likelihood of rolling a desired set of "1 tier" lines per cube type "1"; let $$ p_2 $$ be that of rolling a desired set of "2 tier" lines per cube type "2." We're setting ourself up to compare *any* two types of cubing, but one concrete example would be for "1" to mean rolling perfect epic lines on occult cubes and "2" for rolling 2 stat unique with master cubes.
+Let $$p_1$$ be the likelihood of rolling a desired set of "1 tier" lines per cube type "1;" let $$ p_2 $$ be that of rolling a desired set of "2 tier" lines per cube type "2." We're setting ourself up to compare *any* two types of cubing, but one concrete example would be for "1" to mean rolling perfect epic lines on occult cubes and "2" for rolling 2 stat unique with master cubes.
 
-Now, let $$c_1$$ be the cost per roll\reveal type "1" and $$c_2$$ be that per roll/reveal type "2."
+Now, let $$c_1$$ be the cost per roll type "1" and $$c_2$$ be that per roll type "2."
 
 Finally, let $$N_1$$ and $$N_2$$ be the minimum number of rolls you need to achieve a failure rate $$\leq f$$ on type "1" and "2" rolls, respectively.
 
-The *total* cost of rolling until you have probability $$1 - f$$ of getting your "1 tier" lines with roll type "1" is $$ c_\text{1} N_\text{1}$$, and for "2" it's $$ c_\text{2} N_\text{2}$$. Define a ratio $$k$$:
+The *total* cost of rolling until you have probability $$1 - f$$ of getting your "1 tier" lines with roll type "1" is $$ c_1 N_1$$, and for "2" it's $$ c_2 N_2$$. Define a ratio $$k$$:
 
 $$
-\qquad \displaystyle k \stackrel{.}{=} \frac{c_\text{1} N_\text{1}}{c_\text{1} N_\text{1}}
+\qquad \displaystyle k \stackrel{.}{=} \frac{c_1 N_1}{c_2 N_2}
 $$.
 
 Plugging in what we worked out earlier,
 
 $$
-\boxed{ \qquad \displaystyle k = \frac{c_\text{1} \log \left( 1 - p_\text{2}\right) }{c_\text{2} \log \left( 1 - p_\text{1}\right)}}
+\qquad \displaystyle \boxed{ k = \frac{c_1 \log \left( 1 - p_2\right) }{c_2 \log \left( 1 - p_1\right)}}
 $$.
 
-**SO: when $$k \geq 1$$, it's worth rolling for type "2". Otherwise, it's likely cheaper to go for more lines on occult cubes.** Notice that "maximum desired failure rate" $$f$$ doesn't show up in the final formula at all---we got rid of it by considering only the *ratio* of costs. Thus the result applies for *any* failure rate: the goal is just to get your desired lines with equal chances. It will take more rolls for less likely outcomes (3-lines epic), but will cost more to use fancier cubes. 
+**SO: when $$k \geq 1$$, it's worth rolling for type "2." Otherwise, it's likely cheaper to go for type "1."** Notice that "maximum desired failure rate" $$f$$ doesn't show up in the final formula at all---we got rid of it by considering only the *ratio* of costs. Thus the result applies for *any* failure rate: the goal is just to get your desired lines with equal chances. It will take more rolls for less likely outcomes (3-lines epic), but will cost more to use fancier cubes. 
 
 ### What About Averages?
 Insert fun stuff here.
