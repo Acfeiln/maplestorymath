@@ -58,15 +58,17 @@ $$.
 **SO: when $$k \geq 1$$, it's worth rolling for type "2." Otherwise, it's likely cheaper to go for type "1."** Notice that "maximum desired failure rate" $$f$$ doesn't show up in the final formula at all---we got rid of it by considering only the *ratio* of costs. Thus the result applies for *any* failure rate: the goal is just to get your desired lines with equal chances. It will take more rolls for less likely outcomes (3-lines epic), but will cost more to use fancier cubes. 
 
 ### What About Averages?
-As mentioned before, I've avoided a formulation based on averages. But you could! You'd get a sort of "average $$k$$," which I'll label $$\bar{k}$$, based on the average number of rolls needed and fixed costs $$c_1$$ and $$c_2$$. You'd get
+Like I said earlier, I've avoided a formulation based on averages. But you don't have to! You'd get a sort of "average $$k$$," which I'll label $$\bar{k}$$, based on the expected number of rolls and fixed costs $$c_1$$ and $$c_2$$. You'd get
 
 $$\qquad \displaystyle \bar{k} = \frac{c_1 p_2}{c_2 p_1}$$.
 
 Quite a bit simpler! Why didn't I just do that?
 
-Well, at root, because I didn't want the information the average tells me. It says: okay, you have infinitely many players, and each player is allowed to roll infinitely many times. Let 'em roll. Now, with these infinite statistics, take a weighted average of the number of rolls it took, and there's your number. I didn't want to work with that number, because no player has access to infinitely many attempts. I opted for something more direct: how many rolls before there's a 90% (or whatever %) chance you've gotten your lines, valid even in the 100% limit.
+Well, at root, because I didn't want the information the expected number of rolls tells me. It says: okay, you have infinitely many players, and each player is allowed to roll infinitely many times. Let 'em roll. Now, with these infinite statistics, take a weighted average of the number of rolls it took, and there's your number. I didn't want to work with that number, because no player has access to infinitely many attempts. That average includes not just a few but *infinitely many* sequence lengths that are *longer* than even the richest player could afford. 
 
-What consequences does this have on $$k$$? With some calculus, one can show that whenever $$p_1 \leq p_2$$, $$k \geq \bar{k}$$ (with equality when $$p_1 = p_2$$. This means my approach has you switching over to unique/legendary *sooner* than the average approach, regardless of cubing costs.
+I opted for something more direct: how many rolls before there's a 90% (or whatever %) chance you've gotten your lines. Since I only care *when to switch cubes*, rather than what the cost numbers are individually, my result turns out to be valid even in the 100% success limit. It is, to me, a more directly and usefully interpretable thing.
+
+But what consequences did my approach have on $$k$$, compared to if I'd calculated $$\bar{k}$$? It turns out that (and you can show this with some calculus) whenever $$p_1 \leq p_2$$, $$k \geq \bar{k}$$ (with equality when $$p_1 = p_2$$). This means my approach has you switching over to unique/legendary *sooner* than the average approach---and this is true regardless of cubing costs. 
 
 ### Example: CRA Hat in Bera
 Even more!
